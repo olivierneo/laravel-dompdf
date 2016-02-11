@@ -69,7 +69,7 @@ class ServiceProvider extends IlluminateServiceProvider
 
         $config_file = $this->app['config']->get(
             'dompdf.config_file'
-        ) ?: base_path('vendor/dompdf/dompdf/dompdf_config.inc.php');
+        ) ?: base_path().'/plugins/bop/bm/vendor/dompdf/dompdf/dompdf_config.inc.php';
 
         if (file_exists($config_file)) {
             require_once $config_file;
